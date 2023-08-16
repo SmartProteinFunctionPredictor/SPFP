@@ -1,0 +1,7 @@
+flask
+urllib.parse
+pandas
+re
+numpy
+tensorflow
+gunicorn
