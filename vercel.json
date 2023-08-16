@@ -1,7 +1,4 @@
 {
-  "builds": [
-    { "destination": "@vervel/python" }
-  ],
   "routes": [
     { "source": "/(.*)", 
       "destination": "app.py" }
