@@ -1,5 +1,10 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index" }
+  "builds": [
+    { "source": "app.py",
+      "destination": "@vervel/python" }
+  ],
+  "routes": [
+    { "source": "/(.*)", 
+      "destination": "app.py" }
   ]
 }
