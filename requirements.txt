@@ -1,6 +1,5 @@
 flask
 pandas
-re
 numpy
 tensorflow
 gunicorn
