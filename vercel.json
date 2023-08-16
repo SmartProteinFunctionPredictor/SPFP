@@ -1,6 +1,1 @@
-{
-  "routes": [
-    { "source": "/(.*)", 
-      "destination": "app.py" }
-  ]
-}
+
