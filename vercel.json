@@ -1,7 +1,6 @@
 {
   "builds": [
-    { "source": "app.py",
-      "destination": "@vervel/python" }
+    { "destination": "@vervel/python" }
   ],
   "routes": [
     { "source": "/(.*)", 
