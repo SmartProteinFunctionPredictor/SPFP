@@ -1,10 +1,10 @@
 import re
 
 import numpy as np
-from keras.models import load_model
+import tensorflow as tf
 import pandas as pd
 
-model = load_model('model.h5')
+model = tf.keras.models.load_model('model.h5')
 go_obo_path = 'go.obo'
 gp_terms_path = 'terms_file.pkl'
 
