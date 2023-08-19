@@ -1,4 +1,3 @@
-
 import urllib.parse
 import ast
 from model import final_pred, contains_valid_amino_acids
@@ -6,6 +5,7 @@ from flask import Flask, render_template, request, redirect, url_for
 import pandas as pd
 
 app = Flask(__name__)
+
 
 @app.route("/")
 def index():
@@ -46,7 +46,8 @@ def prediction(result):
     df = df[['Go Term', 'Predicted Function', 'Predicted Value (Confidence)']]
     df['Predicted Function'] = df['Predicted Function'].apply(lambda x: x.split('-')[1]).to_frame()
 
-    html_table_with_centered_headers = df.to_html(classes='table table-bordered table-striped', border=0, index=False,escape=False, render_links=True)
+    html_table_with_centered_headers = df.to_html(classes='table table-bordered table-striped', border=0, index=False,
+                                                  escape=False, render_links=True)
     html_table_with_centered_headers = html_table_with_centered_headers.replace('<th>',
                                                                                 '<th style="text-align: center;">')
     return render_template('Prediction.html', result=html_table_with_centered_headers)
