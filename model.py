@@ -1,5 +1,4 @@
 import re
-
 import numpy as np
 import tensorflow as tf
 import pandas as pd
@@ -12,7 +11,7 @@ gp_terms_path = 'Data files/terms_file.pkl'
 def seq_to_onehot(seq):
     aa_list = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y']
     aa_dict = {aa: i for i, aa in enumerate(aa_list)}
-    seq_onehot = np.zeros((1, 2000, 21))
+    seq_onehot = np.zeros((1, 500, 21))
     for i, aa in enumerate(seq):
         if aa in aa_dict:
             seq_onehot[0, i, aa_dict[aa]] = 1
