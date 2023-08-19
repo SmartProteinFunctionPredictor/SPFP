@@ -1,10 +1,10 @@
 import re
-from flask import Markup
+
 import numpy as np
-import tensorflow as tf
+from keras.models import load_model
 import pandas as pd
 
-model = tf.keras.models.load_model('model.h5')
+model = load_model('model.h5')
 go_obo_path = 'go.obo'
 gp_terms_path = 'terms_file.pkl'
 
