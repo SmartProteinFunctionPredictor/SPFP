@@ -2,7 +2,7 @@ import re
 import numpy as np
 import tensorflow as tf
 import pandas as pd
-from keras import load_model 
+from keras.models import load_model 
 model = load_model('Datafiles/model.h5')
 
 go_obo_path = 'Datafiles/go.obo'
