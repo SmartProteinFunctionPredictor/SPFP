@@ -2,14 +2,22 @@ import re
 import numpy as np
 import tensorflow as tf
 import pandas as pd
+from tensorflow.keras.models import load_model 
+model = load_model('Datafiles/model.h5')
 
+<<<<<<< HEAD
 model = tf.keras.models.load_model('Datafiles/model.h5')
 
+=======
+>>>>>>> bbd7bbc74615c658bec3dd2de32da8d8326a2bee
 go_obo_path = 'Datafiles/go.obo'
 gp_terms_path = 'Datafiles/terms_file.pkl'
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> bbd7bbc74615c658bec3dd2de32da8d8326a2bee
 
 # Define function to convert amino acid sequence to one-hot encoding
 def seq_to_onehot(seq):
