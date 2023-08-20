@@ -3,10 +3,12 @@ import numpy as np
 import tensorflow as tf
 import pandas as pd
 from tensorflow.keras.models import load_model 
-model = load_model('Datafiles/model.h5')
+import subprocess
+if not os.path.isfile('model.h5'):
+    subprocess.run(['curl --output model.h5 "https://media.githubusercontent.com/media/qaseemhussain390/SPFP/master/Datafiles/model.h5"'], shell=True)
 
 
-model = tf.keras.models.load_model('Datafiles/model.h5')
+model = tf.keras.models.load_model('model.h5', compile=False)
 
 go_obo_path = 'Datafiles/go.obo'
 gp_terms_path = 'Datafiles/terms_file.pkl'
