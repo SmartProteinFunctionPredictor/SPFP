@@ -6,15 +6,11 @@ import pandas as pd
 from tensorflow.keras.models import load_model 
 import subprocess
 
-if not os.path.isfile('model.h5'):
-    subprocess.run(['curl', '--output', 'model.h5', 'https://media.githubusercontent.com/media/qaseemhussain390/SPFP/master/Datafiles/model.h5'], shell=False)
 
+model = tf.keras.models.load_model('/Datafiles/model.h5', compile=False)
 
-
-model = tf.keras.models.load_model('model.h5', compile=False)
-
-go_obo_path = 'Datafiles/go.obo'
-gp_terms_path = 'Datafiles/terms_file.pkl'
+go_obo_path = '/Datafiles/go.obo'
+gp_terms_path = '/Datafiles/terms_file.pkl'
 
 
 # Define function to convert amino acid sequence to one-hot encoding
