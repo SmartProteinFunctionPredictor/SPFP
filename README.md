@@ -1,1 +1,1 @@
-# SPFP
+# Smart Protein Function Predictor
